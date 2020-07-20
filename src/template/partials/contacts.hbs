@@ -1,0 +1,34 @@
+<section class="contacts">
+  <div class="container">
+    <h3 class="contacts__title title _decor">Контакты</h3>
+    <div class="contacts__body">
+      <div class="contacts__location contacts-location">
+        {{{image "img/contacts/map.jpg" class="contacts-location__map" alt="Map"}}}
+        <ul class="contacts-location__info contacts-info">
+          <li class="contacts-info__item">
+            {{{icon "home" class="icon _mr"}}}Адрес:
+            <strong>123456, Адрес какой-то</strong>
+          </li>
+          <li class="contacts-info__item">
+            {{{icon "phone" class="icon _mr"}}}Тел.:
+            <strong>+7(123)456-78-90</strong>
+          </li>
+          <li class="contacts-info__item">
+            {{{icon "email" class="icon _mr"}}}E-Mail:
+            <strong>user@test.ru</strong>
+          </li>
+        </ul>
+      </div>
+      <form class="contacts__form contacts-form">
+        <input class="contacts-form__item" type="text" name="name" value="" placeholder="ФИО">
+        <input class="contacts-form__item" type="text" name="phone" value="" placeholder="Контактный телефон">
+        <input class="contacts-form__item" type="text" name="email" value="" placeholder="Контактный e-mail">
+        <input class="contacts-form__item" type="text" name="theme" value=""  placeholder="Тема сообщения">
+        <textarea class="contacts-form__item" name="text" rows="3" placeholder="Текст сообщения"></textarea>
+        <div class="buttons">
+          <button class="btn _dark" type="submit">{{{icon "send" class="icon _mr"}}}Отправить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

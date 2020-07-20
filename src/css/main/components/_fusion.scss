@@ -1,0 +1,18 @@
+.fusion {
+  display: flex;
+  &__item {
+    @include border-radius();
+    &._major {
+      flex: 1 1 auto;
+    }
+    &._minor {
+      flex: 0 0 auto;
+    }
+    &:not(:first-child) {
+      @include border-left-radius(0);
+    }
+    &:not(:last-child) {
+      @include border-right-radius(0);
+    }
+  }
+}

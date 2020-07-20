@@ -1,0 +1,123 @@
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  @media(min-width: $media-breakpoint-m) {
+    max-width: $container-width-m;
+  }
+  @media(min-width: $media-breakpoint-l) {
+    max-width: $container-width-l;
+  }
+  @media(min-width: $media-breakpoint-x) {
+    max-width: $container-width-x;
+  }
+}
+
+
+// // MIXIN GRID
+// @mixin grid-modifiers($breakpoint: "") {
+//   &._#{$breakpoint}major {
+//     width: auto;
+//     max-width: 100%;
+//     flex: 1 1 auto;
+//   }
+//   &._#{$breakpoint}minor {
+//     width: auto;
+//     max-width: 100%;
+//     flex: 0 0 auto;
+//   }
+//   @for $item from 1 through $grid-items {
+//     &._#{$breakpoint}w-#{$item} {
+//       max-width: percentage($item / $grid-items);
+//       flex: 0 0 percentage($item / $grid-items);
+//     }
+//   }
+// }
+//
+// // MIXIN MARGIN
+// @mixin margin-modifiers($breakpoint: "") {
+//   @each $key, $value in $size-values {
+//     ._#{$breakpoint}m-#{$key} {
+//       margin: $value !important;
+//     }
+//     ._#{$breakpoint}my-#{$key} {
+//       margin-top: $value !important;
+//       margin-bottom: $value !important;
+//     }
+//     ._#{$breakpoint}mx-#{$key} {
+//       margin-left: $value !important;
+//       margin-right: $value !important;
+//     }
+//     ._#{$breakpoint}mt-#{$key} {
+//       margin-top: $value !important;
+//     }
+//     ._#{$breakpoint}mb-#{$key} {
+//       margin-bottom: $value !important;
+//     }
+//     ._#{$breakpoint}ml-#{$key} {
+//       margin-left: $value !important;
+//     }
+//     ._#{$breakpoint}mr-#{$key} {
+//       margin-right: $value !important;
+//     }
+//   }
+// }
+//
+// // MIXIN PADDING
+// @mixin padding-modifiers($breakpoint: "") {
+//   @each $key, $value in $size-values {
+//     ._#{$breakpoint}p-#{$key} {
+//       padding: $value !important;
+//     }
+//     ._#{$breakpoint}py-#{$key} {
+//       padding-top: $value !important;
+//       padding-bottom: $value !important;
+//     }
+//     ._#{$breakpoint}px-#{$key} {
+//       padding-left: $value !important;
+//       padding-right: $value !important;
+//     }
+//     ._#{$breakpoint}pt-#{$key} {
+//       padding-top: $value !important;
+//     }
+//     ._#{$breakpoint}pb-#{$key} {
+//       padding-bottom: $value !important;
+//     }
+//     ._#{$breakpoint}pl-#{$key} {
+//       padding-left: $value !important;
+//     }
+//     ._#{$breakpoint}pr-#{$key} {
+//       padding-right: $value !important;
+//     }
+//   }
+// }
+//
+//
+// .grid {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: flex-start;
+//   align-items: stretch;
+//   flex-wrap: wrap;
+//   align-content: stretch;
+//   &__item {
+//     position: relative;
+//     width: 100%;
+//     @include grid-modifiers();
+//     @each $breakpoint, $width in $media-breakpoints {
+//       @media (min-width: $width) {
+//         @include grid-modifiers($breakpoint);
+//       }
+//     }
+//   }
+// }
+//
+// @include margin-modifiers();
+// @include padding-modifiers();
+// @each $breakpoint, $width in $media-breakpoints {
+//   @media (min-width: $width) {
+//     @include margin-modifiers($breakpoint);
+//     @include padding-modifiers($breakpoint);
+//   }
+// }

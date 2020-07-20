@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  line-height: 1.15;
+  font-size: $html-font-size;
+  text-size-adjust: 100%;
+  color: $html-foreground-color;
+  font-family: $html-font-family;
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+
+article,
+aside,
+footer,
+header,
+main,
+nav,
+section,
+ul,
+ol,
+li {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.8rem;
+}
+h3 {
+  font-size: 1.6rem;
+}
+h4 {
+  font-size: 1.4rem;
+}
+h5 {
+  font-size: 1.2rem;
+}
+h6 {
+  font-size: 1rem;
+}
+
+:focus,
+:active,
+a:focus,
+a:active {
+  outline: none;
+}
+
+img {
+  border: none;
+  vertical-align: top;
+}
+svg {
+  overflow: hidden;
+  vertical-align: top;
+}
+
+label {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+  cursor: pointer;
+  &:focus,
+  &:active,
+  &::-moz-focus-inner {
+    outline: none;
+    border: none;
+  }
+}
+input {
+  &::-ms-clear {
+    display: none;
+  }
+}
+
+input,
+button,
+select,
+textarea {
+  min-width: 0;
+  padding: ($padding / 2) $padding;
+  @include border();
+  @include border-radius();
+  background: $html-background-color;
+  font-size: 1rem;
+  font-family: inherit;
+}
+textarea {
+  resize: none;
+}

@@ -1,0 +1,64 @@
+.buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+
+.btn {
+  padding: $btn-padding-y $btn-padding-x;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  @include border($btn-border);
+  @include border-radius($btn-border-radius);
+  background-color: $btn-background-color;
+  @include box-shadow($btn-box-shadow);
+  text-decoration: none;
+  color: $btn-foreground-color;
+  cursor: pointer;
+  .icon {
+    fill: $btn-foreground-color;
+  }
+  &:hover,
+  &:focus {
+    background-color: darken($btn-background-color, $btn-hover-darken);
+    color: $btn-foreground-color;
+    .icon {
+      fill: $btn-foreground-color;
+    }
+  }
+  &:active,
+  &._active {
+    background-color: darken($btn-background-color, $btn-active-darken);
+    color: $btn-foreground-color;
+    .icon {
+      fill: $btn-foreground-color;
+    }
+  }
+  @each $modifier, $colors in $modifier-colors {
+    &.#{$modifier} {
+      background-color: map-get($colors, 'color-background');
+      color: map-get($colors, 'color-foreground');
+      .icon {
+        fill: map-get($colors, 'color-foreground');
+      }
+      &:hover,
+      &:focus {
+        background-color: darken(map-get($colors, 'color-background'), $btn-hover-darken);
+        color: map-get($colors, 'color-foreground');
+        .icon {
+          fill: map-get($colors, 'color-foreground');
+        }
+      }
+      &:active,
+      &._active {
+        background-color: darken(map-get($colors, 'color-background'), $btn-active-darken);
+        color: map-get($colors, 'color-foreground');
+        .icon {
+          fill: map-get($colors, 'color-foreground');
+        }
+      }
+    }
+  }
+}

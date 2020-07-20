@@ -1,0 +1,41 @@
+<header class="header">
+  <div class="header__top header-top">
+    <div class="container">
+      <a class="header-top__logo header-logo" href="#">
+        {{{image "img/logo.svg" class="header-logo__image"}}}
+        <h2 class="header-logo__title">Каменный Век</h2>
+      </a>
+      <nav class="header-top__nav nav">
+        <a class="nav__item" href="#">{{{icon "star" class="icon"}}}О нас</a>
+        <a class="nav__item" href="#">{{{icon "library" class="icon"}}}Статьи</a>
+        <a class="nav__item" href="#">{{{icon "images" class="icon"}}}Галерея</a>
+        <a class="nav__item" href="#">{{{icon "map" class="icon"}}}Адреса</a>
+      </nav>
+      <div class="header-top__search header-search">
+        <label class="header-search__label" for="search_input">Поиск по сайту</label>
+        <form class="header-search__form fusion" method="post">
+          <input class="header-search__form-input fusion__item _major" id="search_input" name="search" type="text" value="" placeholder="Ключевые слова">
+          <button class="header-search__form-button btn _light fusion__item _minor">
+            {{{icon "search" class="icon"}}}
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="header__main header-main">
+    <div class="container">
+      <div class="header-main__promo header-promo">
+        <h4 class="header-promo__title">Скидка 20% прямо сейчас!</h4>
+        <p class="header-promo__text">
+          Наши специалисты-консультанты всегда готовы помочь Вам в выборе отделки из камня.
+        </p>
+        <form class="header-promo__form fusion" action="" method="post">
+          <input class="header-promo__form-input fusion__item _major" id="input_promo" name="promo" type="text" value="" placeholder="E-Mail">
+          <button class="header-promo__form-button btn _attention fusion__item _minor">
+            {{{icon "check" class="icon _mr"}}}Заказать
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>

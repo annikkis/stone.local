@@ -1,0 +1,61 @@
+// SIZE
+@mixin size($width, $height: $width) {
+  height: $height;
+  width: $width;
+}
+
+// BORDER
+@mixin border($border: $border) {
+  @if $border-enabled {
+    border: $border;
+  } @else {
+    border: none;
+  }
+}
+// @mixin border-top($border: $border) {
+//   @if $border-enabled {
+//     border-top: $border;
+//   }
+// }
+// @mixin border-bottom($border: $border) {
+//   @if $border-enabled {
+//     border-bottom: $border;
+//   }
+// }
+// @mixin border-left($border: $border) {
+//   @if $border-enabled {
+//     border-left: $border;
+//   }
+// }
+// @mixin border-right($border: $border) {
+//   @if $border-enabled {
+//     border-right: $border;
+//   }
+// }
+
+@mixin border-radius($radius: $border-radius) {
+  @if $border-radius-enabled {
+    border-radius: $radius;
+  }
+}
+@mixin border-left-radius($radius: $border-radius) {
+  @if $border-radius-enabled {
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+  }
+}
+@mixin border-right-radius($radius: $border-radius) {
+  @if $border-radius-enabled {
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+  }
+}
+
+// BOX-SHADOW
+@mixin box-shadow($shadow: $box-shadow) {
+  @if $box-shadow-enabled {
+    box-shadow: $shadow;
+  } @else {
+    box-shadow: none;
+  }
+}

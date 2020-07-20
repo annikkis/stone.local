@@ -1,0 +1,9 @@
+.icon {
+  @include size($icon-width, $icon-height);
+  &._ml {
+    margin-left: ($margin / 4);
+  }
+  &._mr {
+    margin-right: ($margin / 4);
+  }
+}

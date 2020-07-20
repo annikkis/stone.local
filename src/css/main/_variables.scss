@@ -1,0 +1,116 @@
+$border-enabled: false !default;
+$border-radius-enabled: true !default;
+$box-shadow-enabled: false !default;
+
+// COLORS
+$color-light: #ffffff !default;
+$color-dark: #000000 !default;
+$color-grey: #e0e0e0 !default;
+$color-light-1: #fefefe !default;
+$color-light-2: #f0ead8 !default;
+$color-light-3: #d9d2be !default;
+$color-dark-1: #333333 !default;
+$color-dark-2: #503830 !default;
+$color-dark-3: #887763 !default;
+$color-dark-4: #8f786b !default;
+$color-attention: #f66742 !default;
+$modifier-colors: () !default;
+$modifier-colors: map-merge(
+  (
+    "_light": (
+      'color-background': $color-light-3,
+      'color-foreground': $color-dark-2,
+    ),
+    "_dark": (
+      'color-background': $color-dark-3,
+      'color-foreground': $color-light,
+    ),
+    "_attention": (
+      'color-background': $color-attention,
+      'color-foreground': $color-light,
+    ),
+  ), $modifier-colors
+);
+
+// VALUES
+$size-values: () !default;
+$size-values: map-merge(
+  (
+    "auto": auto,
+    "0": 0,
+    "1": .25rem,
+    "2": .5rem,
+    "3": .75rem,
+    "4": 1rem,
+  ), $size-values
+);
+
+// GRID
+// @media(min-width: 600px) {}  - [m]
+// @media(min-width: 992px) {}  - [l]
+// @media(min-width: 1200px) {} - [x]
+$media-breakpoint-m: 600px !default;
+$media-breakpoint-l: 992px !default;
+$media-breakpoint-x: 1200px !default;
+$media-breakpoints: () !default;
+$media-breakpoints: map-merge(
+  (
+    "m_": $media-breakpoint-m,
+    "l_": $media-breakpoint-l,
+    "x_": $media-breakpoint-x,
+  ), $media-breakpoints
+);
+$container-width-m: $media-breakpoint-m - 10px !default;
+$container-width-l: $media-breakpoint-l - 20px !default;
+$container-width-x: $media-breakpoint-x - 30px !default;
+$grid-items: 12 !default;
+
+
+
+
+// DEFAULT
+$margin: 1rem !default;
+$padding: 1rem !default;
+$z-index: 10 !default;
+$border-width: 1px !default;
+$border-style: solid !default;
+$border-color: #b0bec5 !default;
+$border: $border-width $border-style $border-color !default;
+$border-radius: 4px !default;
+$box-shadow: 0 0 2px 0 $border-color !default;
+$transition-duration: .25s !default;
+
+// HTML
+$html-background-color: $color-light !default;
+$html-foreground-color: $color-dark-1 !default;
+$html-font-size: 16px !default;
+$html-font-family: "Roboto", "Noto Sans", "Open Sans", "sans-serif", "Helvetica Neue", "Arial" !default;
+
+// LINK
+$link-color-light: #c5cae9 !default;
+$link-color-dark: #1a237e !default;
+
+// COMPONENTS
+// .icon
+$icon-height: 1.2em !default;
+$icon-width: 1.2em !default;
+
+// .btn
+$btn-padding-y: ($padding / 2) !default;
+$btn-padding-x: $padding !default;
+$btn-border: $border !default;
+$btn-border-radius: $border-radius !default;
+$btn-background-color: $color-grey !default;
+$btn-foreground-color: $color-dark-1 !default;
+$btn-box-shadow: $box-shadow !default;
+$btn-hover-darken: 10% !default;
+$btn-active-darken: 20% !default;
+
+// .nav
+$nav-padding-y: ($padding / 4) !default;
+$nav-padding-x: ($padding / 2) !default;
+$nav-border-radius: $border-radius !default;
+$nav-background-color: $color-dark-4 !default;
+$nav-foreground-color: $color-light-3 !default;
+$nav-hover-darken: 10% !default;
+$nav-active-darken: 20% !default;

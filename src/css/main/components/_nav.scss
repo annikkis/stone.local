@@ -1,0 +1,29 @@
+.nav {
+  display: flex;
+  &__item {
+    padding: $nav-padding-y $nav-padding-x;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include border-radius($nav-border-radius);
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $nav-foreground-color;
+    transition: all .5s;
+    &:hover,
+    &:focus {
+      background-color: darken($nav-background-color, $nav-hover-darken);
+    }
+    &:active,
+    &._active {
+      background-color: darken($nav-background-color, $nav-active-darken);
+    }
+    .icon {
+      @include size(32px);
+      margin-bottom: ($padding / 4);
+      fill: $nav-foreground-color;
+    }
+  }
+}

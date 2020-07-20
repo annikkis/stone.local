@@ -1,0 +1,23 @@
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  &._decor {
+    flex-wrap: nowrap;
+    &::before,
+    &::after {
+      height: 1px;
+      flex: 1 1 auto;
+      display: block;
+      background: $html-foreground-color;
+      content: "";
+    }
+    &::before {
+      margin-right: $margin;
+    }
+    &::after {
+      margin-left: $margin;
+    }
+  }
+}

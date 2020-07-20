@@ -1,0 +1,120 @@
+.direction {
+  padding: $padding ($padding / 2);
+  background: $color-dark-4 url('../img/bg-direction.jpg') repeat;
+  box-shadow: inset 150px 0 100px 0 $color-dark-4, inset -150px 0 100px 0 $color-dark-4;
+  color: $color-light-2;
+  &__title {
+    margin-bottom: $margin;
+    text-transform: uppercase;
+    &.title._decor {
+      &::before,
+      &::after {
+        background-color: $color-light-2;
+      }
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+  }
+  &__material {
+    margin-bottom: $margin;
+  }
+
+  &-material {
+    &__title {
+      margin-bottom: $margin;
+      text-align: center;
+    }
+    &__body {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__image {
+      height: 114px;
+      width: 139px;
+      flex: 0 0 auto;
+    }
+    &__list {
+      margin-top: 4px;
+      margin-bottom: 28px;
+      margin-left: ($margin / 2);
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+  &-target {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__list {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      li {
+        display: flex;
+        align-items: center;
+      }
+      .icon {
+        @include size(15px);
+        fill: $color-light-2;
+      }
+    }
+    &::before,
+    &::after {
+      height: 218px;
+      line-height: .72;
+      font-size: 218px;
+      font-family: "PT Serif", "Segoe UI";
+    }
+    &::before {
+      content: "{";
+    }
+    &::after {
+      content: "}";
+    }
+  }
+
+  @media(min-width: $media-breakpoint-l) {
+    padding: (2 * $padding) $padding;
+    &__body {
+      flex-direction: row;
+    }
+    &__material {
+      margin-bottom: 0;
+      align-self: auto;
+      flex: 0 0 auto;
+    }
+    &__target {
+      flex: 1 1 auto;
+    }
+    &-material {
+      &__image {
+        height: 228px;
+        width: 278px;
+      }
+      &__list {
+        margin-top: 18px;
+        margin-bottom: 64px;
+      }
+    }
+    &-target {
+      &__list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        li {
+          margin: 20px 0;
+          flex: 1 1 33%;
+        }
+        .icon {
+          @include size(20px);
+        }
+      }
+    }
+  }
+}
